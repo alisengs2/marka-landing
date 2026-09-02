@@ -292,8 +292,16 @@ img,svg{display:block;max-width:100%;}
   color:var(--ink);font-size:19px;line-height:1.45;
   max-width:24ch;
 }
-/* Inline rather than a flex sibling, so the marker sits tight against the text. */
-.event-note .ast-lg{font-size:1.9em;line-height:0;vertical-align:-.18em;margin-right:.18em;}
+/* Inline rather than a flex sibling, so the marker sits tight against the
+   text. Matches the session markers: display face, muted, superscript --
+   just larger, since this one is the key rather than the reference. */
+.event-note .ast-lg{
+  font-family:var(--display);
+  font-size:1.25em;line-height:1;
+  vertical-align:super;
+  margin-right:.22em;
+  color:var(--ink-2);
+}
 .event-intro .sect-title{
   display:inline-block;
   padding-bottom:.14em;
