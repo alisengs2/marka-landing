@@ -409,3 +409,13 @@ img,svg{display:block;max-width:100%;}
   .ticker-track span{font-size:9px;letter-spacing:.1em;padding-inline:9px;}
   .ticker-track span::after{margin-left:9px;}
 }
+
+/* The header (80px) and the hero ticker are both sticky, so they cover the
+   top ~132px of the viewport -- desktop ~132px, mobile ~109px. Without this,
+   an anchor jump to #visit or #attend parks the section title underneath
+   them. scroll-margin-top moves the landing point clear, leaving the
+   section's own padding as breathing room above the title. */
+.sect{scroll-margin-top:110px;}
+@media (max-width:760px){
+  .sect{scroll-margin-top:90px;}
+}
