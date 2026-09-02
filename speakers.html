@@ -43,8 +43,20 @@
       <a href="speakers.html">Speakers</a>
       <a href="venue.html">Venue</a>
     </nav>
-    <a class="btn btn-sm" href="index.html#attend">Attend</a>
+    <div class="top-actions">
+      <a class="btn btn-sm" href="index.html#attend">Attend</a>
+      <button class="nav-toggle" type="button" aria-expanded="false"
+              aria-controls="mobileNav" aria-label="Open menu">
+        <span class="bars" aria-hidden="true"></span>
+      </button>
+    </div>
   </div>
+  <nav class="mobile-nav" id="mobileNav" aria-label="Primary, mobile">
+    <a href="about.html">About</a>
+    <a href="stepevi.html">MARKA x STEPEVI</a>
+    <a href="speakers.html">Speakers</a>
+    <a href="venue.html">Venue</a>
+  </nav>
 </header>
 
 <main>
@@ -89,5 +101,18 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var btn = document.querySelector('.nav-toggle');
+  var menu = document.getElementById('mobileNav');
+  if (!btn || !menu) return;
+  btn.addEventListener('click', function(){
+    var open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    btn.setAttribute('aria-label', open ? 'Open menu' : 'Close menu');
+    menu.classList.toggle('is-open', !open);
+  });
+})();
+</script>
 </body>
 </html>
