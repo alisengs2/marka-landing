@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Venue for MARKA London — the Design Museum, London, 13 October 2026.">
+<title>The Venue — MARKA London</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,400..700&family=Newsreader:opsz,wght@6..72,300..600&display=swap">
+<link rel="stylesheet" href="styles.css">
+<style>
+  /* ---------- L2 page ---------- */
+  .l2{padding-block:clamp(30px,4vw,58px) clamp(50px,7vw,96px);}
+  .l2-title{
+    font-family:var(--display);
+    font-variation-settings:"wdth" 110,"wght" 700;letter-spacing:-.02em;
+    font-size:clamp(34px,5.4vw,64px);line-height:.98;
+    margin:0 0 clamp(28px,3.6vw,52px);
+    text-wrap:balance;
+  }
+  .banner-fig{margin:0 0 clamp(38px,5vw,76px);}
+  .banner{aspect-ratio:21/9;overflow:hidden;}
+  .banner svg,
+  .banner img{width:100%;height:100%;object-fit:cover;}
+  .banner-fig figcaption{
+    margin-top:12px;
+    font-size:15px;color:var(--ink-2);
+  }
+  @media (max-width:760px){.banner{aspect-ratio:16/10;}}
+
+  .about-body{max-width:68ch;font-size:clamp(18px,1.5vw,21px);line-height:1.5;}
+  .l2-subtitle{
+    font-family:var(--display);
+    font-variation-settings:"wdth" 106,"wght" 600;letter-spacing:-.01em;
+    font-size:clamp(24px,2.6vw,34px);line-height:1.06;
+    margin:0 0 .3em;
+    text-wrap:balance;
+  }
+  .about-body > * + .l2-subtitle{margin-top:clamp(38px,4.4vw,60px);}
+
+  /* Venue details: photo left, address and contact right. */
+  .venue-block{
+    display:grid;grid-template-columns:1fr 1fr;gap:var(--gap);
+    align-items:start;margin-top:clamp(44px,6vw,86px);
+  }
+  .venue-media{aspect-ratio:16/9;overflow:hidden;}
+  .venue-media img{width:100%;height:100%;object-fit:cover;}
+  .venue-info{font-size:clamp(19px,1.7vw,24px);font-weight:600;line-height:1.34;}
+  .venue-info address{font-style:normal;margin:0;}
+  .venue-info .venue-date{margin:1.6em 0 0;font-variant-numeric:tabular-nums;}
+  .venue-info .venue-social{margin:1.6em 0 0;}
+  .venue-info .venue-social a{border-bottom:1px solid var(--rule);}
+  .venue-info .venue-social a:hover{border-bottom-color:var(--ink);}
+  @media (max-width:760px){
+    .venue-block{grid-template-columns:1fr;}
+    .venue-info{font-size:19px;}
+  }
+  .about-body p{margin:0 0 1.1em;}
+  .about-body p:last-child{margin-bottom:0;}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top-in">
+    <a class="mark-logo" href="index.html"><img src="assets/logo.png" alt="MARKA London — Capsule Edition"></a>
+    <nav class="nav" aria-label="Primary">
+      <a href="about.html">About</a>
+      <a href="stepevi.html">MARKA x STEPEVI</a>
+      <a href="speakers.html">Speakers</a>
+      <a href="venue.html">Venue</a>
+    </nav>
+    <a class="btn btn-sm" href="index.html#attend">Attend</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="l2">
+    <div class="wrap">
+
+      <h1 class="l2-title">The Venue</h1>
+
+      <figure class="banner-fig">
+        <div class="banner">
+          <img src="assets/venue-design-museum-sign.jpg" alt="The Design Museum lettering on the limestone facade of the museum in Kensington, London.">
+        </div>
+        <figcaption>The Design Museum, London. Venue for MARKA London, 13 October 2026.</figcaption>
+      </figure>
+
+      <div class="about-body">
+        <h2 class="l2-subtitle">An iconic setting for ideas that shape the future</h2>
+        <p>MARKA London takes place at the Design Museum in Kensington, the world&rsquo;s leading museum of contemporary design and one of the city&rsquo;s defining post-war buildings.</p>
+        <p>The museum occupies the former Commonwealth Institute on Kensington High Street, on the edge of Holland Park. Completed in 1962 by Robert Matthew, Johnson-Marshall and Partners, the structure is known above all for its copper roof: a hyperbolic paraboloid that spans the full width of the building and lifts at two opposing corners. John Pawson, who later redesigned its interiors, describes it as a tent in the park.</p>
+        <p>The conference is hosted in the Sachs Family Park Room on the museum&rsquo;s second floor.</p>
+      </div>
+
+      <div class="venue-block">
+        <div class="venue-media">
+          <img src="assets/venue-design-museum-bw.jpg" alt="The atrium of the Design Museum in London, under its curved timber roof.">
+        </div>
+        <div class="venue-info">
+          <address>
+            The Design Museum<br>
+            224&ndash;238 Kensington High Street<br>
+            London W8 6AG
+          </address>
+          <p class="venue-date">13 October 2026</p>
+          <p class="venue-social"><a href="https://www.instagram.com/designmuseum/" target="_blank" rel="noopener noreferrer">@designmuseum</a></p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="mark-logo" href="index.html"><img src="assets/logo.png" alt="MARKA London — Capsule Edition"></a>
+      </div>
+      <div>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#visit">Programme</a></li>
+          <li><a href="index.html#attend">How to attend</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li><a href="venue.html">Venue</a></li>
+          <li><a href="speakers.html">Speakers</a></li>
+          <li><a href="stepevi.html">MARKA x STEPEVI</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
