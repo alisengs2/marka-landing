@@ -30,6 +30,82 @@
   .about-body > * + .l2-subtitle{margin-top:clamp(38px,4.4vw,60px);}
   .about-body p{margin:0 0 1.1em;}
   .about-body p:last-child{margin-bottom:0;}
+
+  /* ---------- speaker rows ----------
+     Two roughly equal columns, centred against each other, alternating
+     sides down the stack. The portrait always comes first in the source;
+     even rows just swap the grid columns, so reading order stays
+     photo-then-profile everywhere, including on phones. */
+  .speakers{
+    /* Opening hairline, matching the one that closes the stack below. */
+    margin-top:clamp(44px,5.6vw,80px);
+    padding-top:clamp(48px,6vw,88px);
+    border-top:1px solid var(--rule-strong);
+    display:flex;flex-direction:column;
+    gap:clamp(56px,8vw,124px);
+  }
+  .speaker{
+    display:grid;grid-template-columns:1fr 1fr;
+    gap:clamp(28px,4.4vw,76px);
+    align-items:center;
+  }
+  .speaker:nth-child(even) .speaker-photo{grid-column:2;grid-row:1;}
+  .speaker:nth-child(even) .speaker-profile{grid-column:1;grid-row:1;}
+
+  /* The delivered artwork is used whole -- uncropped 2:3 portraits, red
+     name plate included -- so the frame takes the file's own ratio. */
+  .speaker-photo{margin:0;overflow:hidden;}
+  .speaker-photo img{
+    width:100%;height:auto;
+    transition:transform .5s cubic-bezier(.2,.6,.2,1);
+  }
+  .speaker:hover .speaker-photo img{transform:scale(1.03);}
+
+  .speaker-name{
+    font-family:var(--display);
+    font-variation-settings:"wdth" 106,"wght" 600;letter-spacing:-.01em;
+    font-size:clamp(26px,2.8vw,38px);line-height:1.04;
+    margin:0;
+    text-wrap:balance;
+  }
+  /* A step up from the 11px .label default, in line with the other places
+     the site enlarges it (.event-intro .label at 12.65px, .slot-time at
+     14.95px). Tracking eases off a touch so the line doesn't sprawl. */
+  .speaker-role{margin:14px 0 0;font-size:13px;letter-spacing:.12em;}
+  .speaker-bio{
+    margin:clamp(20px,2.2vw,28px) 0 0;
+    color:var(--ink-2);
+    font-size:clamp(17px,1.35vw,19px);line-height:1.55;
+    max-width:46ch;
+  }
+
+  /* Closing note under the stack: white hairline, matching the one that
+     opens it, with the type in white too.
+     The line is held to a single row at every width -- min() lets it track
+     the viewport below ~900px and caps it at 56px above that, so the
+     nowrap never forces a horizontal scroll. */
+  .speakers-more{
+    margin-top:clamp(50px,7vw,104px);
+    padding-top:clamp(20px,2.4vw,30px);
+    border-top:1px solid var(--rule-strong);
+    font-family:var(--display);
+    font-variation-settings:"wdth" 108,"wght" 700;
+    font-size:min(6vw,56px);line-height:1.06;
+    letter-spacing:.02em;text-transform:uppercase;
+    white-space:nowrap;
+    color:var(--ink);
+  }
+
+  @media (max-width:760px){
+    .speaker{grid-template-columns:1fr;gap:22px;}
+    /* Undo the swap: on one column both sides would collide in row 1. */
+    .speaker:nth-child(even) .speaker-photo,
+    .speaker:nth-child(even) .speaker-profile{grid-column:1;grid-row:auto;}
+    .speaker-bio{max-width:none;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .speaker-photo img{transition:none;}
+  }
 </style>
 </head>
 <body>
@@ -69,8 +145,49 @@
       <div class="about-body">
         <h2 class="l2-subtitle">Distinct voices. New perspectives.</h2>
         <p>MARKA London brings together influential thinkers, creators and leaders shaping culture, design, luxury and the way we live today. Expect unexpected encounters, fresh perspectives and conversations that stay with you long after the day ends.</p>
-        <p>Speaker line-up to be announced on September 14.</p>
       </div>
+
+      <div class="speakers">
+
+        <article class="speaker">
+          <figure class="speaker-photo">
+            <img src="assets/speaker-alfhild-kulper.jpg" width="852" height="1200" loading="lazy"
+                 alt="Alfhild K&uuml;lper, textile artist and designer, photographed in black and white.">
+          </figure>
+          <div class="speaker-profile">
+            <h2 class="speaker-name">Alfhild K&uuml;lper</h2>
+            <p class="label speaker-role">Textile Artist &amp; Designer</p>
+            <p class="speaker-bio">For Alfhild K&uuml;lper, softness is more than a material quality &mdash; it is a way of seeing the world. The Swedish-born, Amsterdam-based artist transforms wool, memory and emotion into tactile landscapes that blur the boundaries between art and design. Working with leftover yarns and surplus wool, she gives forgotten materials new life, making sustainability part of her creative language. A former Head of Design at Viktor &amp; Rolf, her work explores craft, human touch, comfort and connection.</p>
+          </div>
+        </article>
+
+        <article class="speaker">
+          <figure class="speaker-photo">
+            <img src="assets/speaker-dylan-jones.jpg" width="852" height="1200" loading="lazy"
+                 alt="Dylan Jones, editor, author and cultural curator, photographed in black and white.">
+          </figure>
+          <div class="speaker-profile">
+            <h2 class="speaker-name">Dylan Jones</h2>
+            <p class="label speaker-role">Editor &middot; Author &middot; Cultural Curator</p>
+            <p class="speaker-bio">For decades, Dylan Jones has had a front-row seat to British culture and helped shape the conversation around it. From fashion and music to art, lifestyle, politics and society, his world has always been about the people, ideas and encounters that define an era. An editor, author and cultural connector with an instinct for what and who matters next.</p>
+          </div>
+        </article>
+
+        <article class="speaker">
+          <figure class="speaker-photo">
+            <img src="assets/speaker-luca-molinari.jpg" width="852" height="1200" loading="lazy"
+                 alt="Luca Molinari, architect, critic and curator, photographed in black and white.">
+          </figure>
+          <div class="speaker-profile">
+            <h2 class="speaker-name">Luca Molinari</h2>
+            <p class="label speaker-role">Architect, Critic &amp; Curator</p>
+            <p class="speaker-bio">For Luca Molinari, architecture is never simply about buildings &mdash; it is about people, culture and the way we imagine our future. An architect, critic and curator, he has spent his career exploring how cities, spaces and institutions can carry memory while responding to a changing world. Moving between architecture, museums, publishing and cultural discourse, Molinari brings a deeply human perspective to the built environment &mdash; seeing design not only as something we create, but as something that shapes the way we live, connect and belong.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="speakers-more">More to come soon&hellip;</p>
 
     </div>
   </section>
