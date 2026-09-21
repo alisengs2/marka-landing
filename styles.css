@@ -285,23 +285,6 @@ img,svg{display:block;max-width:100%;}
   border-top:1px solid var(--rule-strong);padding-top:22px;
 }
 .event-intro .label{font-size:12.65px;margin-bottom:12px;color:var(--ink-2);}
-/* Footnote marker on the sessions, and its key under the section title. */
-.slot h3 .ast{font-size:.55em;line-height:1;vertical-align:super;margin-left:3px;color:var(--ink-2);}
-.event-note{
-  margin:clamp(20px,2.4vw,28px) 0 0;
-  color:var(--ink);font-size:19px;line-height:1.45;
-  max-width:24ch;
-}
-/* Inline rather than a flex sibling, so the marker sits tight against the
-   text. Matches the session markers: display face, muted, superscript --
-   just larger, since this one is the key rather than the reference. */
-.event-note .ast-lg{
-  font-family:var(--display);
-  font-size:1.25em;line-height:1;
-  vertical-align:super;
-  margin-right:.22em;
-  color:var(--ink-2);
-}
 .event-intro .sect-title{
   display:inline-block;
   padding-bottom:.14em;
