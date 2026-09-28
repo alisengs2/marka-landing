@@ -65,3 +65,7 @@ normally hosted site serves these files directly and does not need it.
 
 Copy, images and the schedule are supplied by MARKA. The Design Museum Instagram
 handle on the venue page should be verified before launch.
+
+`EDITORIAL.md` is the guide for everyone writing or curating that content — the
+premise, the city, the venue, the partnership, how the speakers connect, and the
+house voice and image spec for adding a speaker.
