@@ -37,7 +37,7 @@
      even rows just swap the grid columns, so reading order stays
      photo-then-profile everywhere, including on phones. */
   .speakers{
-    /* Opening hairline, matching the one that closes the stack below. */
+    /* Hairline opening the stack, under the intro copy. */
     margin-top:clamp(44px,5.6vw,80px);
     padding-top:clamp(48px,6vw,88px);
     border-top:1px solid var(--rule-strong);
@@ -80,23 +80,6 @@
     color:var(--ink-2);
     font-size:clamp(17px,1.35vw,19px);line-height:1.55;
     max-width:46ch;
-  }
-
-  /* Closing note under the stack: white hairline, matching the one that
-     opens it, with the type in white too.
-     The line is held to a single row at every width -- min() lets it track
-     the viewport below ~900px and caps it at 56px above that, so the
-     nowrap never forces a horizontal scroll. */
-  .speakers-more{
-    margin-top:clamp(50px,7vw,104px);
-    padding-top:clamp(20px,2.4vw,30px);
-    border-top:1px solid var(--rule-strong);
-    font-family:var(--display);
-    font-variation-settings:"wdth" 108,"wght" 700;
-    font-size:min(6vw,56px);line-height:1.06;
-    letter-spacing:.02em;text-transform:uppercase;
-    white-space:nowrap;
-    color:var(--ink);
   }
 
   @media (max-width:760px){
@@ -233,6 +216,20 @@
 
         <article class="speaker">
           <figure class="speaker-photo">
+            <img src="assets/speaker-sahir-erozan.jpg" width="852" height="1200" loading="lazy"
+                 alt="Sahir Erozan, hospitality pioneer, photographed in black and white by the water.">
+          </figure>
+          <div class="speaker-profile">
+            <h2 class="speaker-name">Sahir Erozan</h2>
+            <p class="label speaker-role">Cultural Hospitality Pioneer</p>
+            <p class="speaker-bio">A maverick of contemporary hospitality, Sahir Erozan has spent decades creating places with an unmistakable character of their own.</p>
+            <p class="speaker-bio">From Washington, D.C. to Istanbul and Bodrum, he has built a world around food, music, people and a highly personal approach to hospitality. At MA&Ccedil;AKIZI, he took the spirit of hospitality first created by his mother and reimagined it for a contemporary global audience, while preserving the warmth and individuality at its heart.</p>
+            <p class="speaker-bio">The result is a distinctive approach to hospitality, unmistakably Turkish, purely Bodrum, truly international and entirely one of a kind. An inspiring story of how something deeply personal and local can evolve into a cultural icon with global resonance.</p>
+          </div>
+        </article>
+
+        <article class="speaker">
+          <figure class="speaker-photo">
             <img src="assets/speaker-alfhild-kulper.jpg" width="852" height="1200" loading="lazy"
                  alt="Alfhild K&uuml;lper, textile artist and designer, photographed in black and white.">
           </figure>
@@ -285,9 +282,64 @@
           </div>
         </article>
 
-      </div>
+        <article class="speaker">
+          <figure class="speaker-photo">
+            <img src="assets/speaker-melinda-stevens.jpg" width="852" height="1200" loading="lazy"
+                 alt="Melinda Stevens, editor and creative director, photographed in black and white.">
+          </figure>
+          <div class="speaker-profile">
+            <h2 class="speaker-name">Melinda Stevens</h2>
+            <p class="label speaker-role">Editor &middot; Creative Director &amp; Cultural Storyteller</p>
+            <p class="speaker-bio">Melinda Stevens is an influential voice in contemporary travel, culture and lifestyle, known for an instinctive ability to identify the places, people and ideas that shape the way we experience the world.</p>
+            <p class="speaker-bio">During her celebrated tenure as Editor-in-Chief of <em>Cond&eacute; Nast Traveller</em>, she helped redefine modern travel journalism, bringing culture, creativity and a strong sense of storytelling to its pages. She later became founding co-editor of <em>A Rabbit&rsquo;s Foot</em>, extending her editorial world into film, art and cultural conversation.</p>
+            <p class="speaker-bio">Curious, highly visual and deeply interested in people, Melinda approaches travel not simply through destinations, but through the personalities, rituals and stories that give places their identity.</p>
+          </div>
+        </article>
 
-      <p class="speakers-more">More to come soon&hellip;</p>
+        <article class="speaker">
+          <figure class="speaker-photo">
+            <img src="assets/speaker-tom-atton-moore.jpg" width="852" height="1200" loading="lazy"
+                 alt="Tom Atton Moore, artist and designer, photographed in black and white.">
+          </figure>
+          <div class="speaker-profile">
+            <h2 class="speaker-name">Tom Atton Moore</h2>
+            <p class="label speaker-role">Artist &amp; Designer</p>
+            <p class="speaker-bio">Tom Atton Moore is a London-based artist and designer redefining the rug as a contemporary art form. With a background in fashion and photography, his instinctive approach brings together bold colour, abstract forms and expressive mark-making, creating a distinctive dialogue between art, design and function.</p>
+            <p class="speaker-bio">His outstanding approach has led to collaborations across art, fashion and design, including with Burberry. At MARKA London, Tom will share the creative journey behind this collaboration and how the craftsmanship and technical expertise of STEPEVI in customising each individual piece helped transform his artistic vision into reality.</p>
+            <p class="speaker-bio">Through his story, he explores a wider question: how do you turn an idea into something that has never existed before?</p>
+          </div>
+        </article>
+
+        <article class="speaker">
+          <figure class="speaker-photo">
+            <img src="assets/speaker-fat-tony.jpg" width="852" height="1200" loading="lazy"
+                 alt="Fat Tony, DJ, photographed in black and white against a dark background.">
+          </figure>
+          <div class="speaker-profile">
+            <h2 class="speaker-name">Fat Tony</h2>
+            <p class="label speaker-role">DJ &amp; Cultural Icon</p>
+            <p class="speaker-bio">For more than four decades, Fat Tony has been at the heart of London&rsquo;s music, fashion and nightlife, helping shape the soundtrack and spirit of a constantly changing city.</p>
+            <p class="speaker-bio">From the legendary clubs of 1980s London to international dance floors, fashion shows and some of the world&rsquo;s most celebrated parties, his career has connected music with fashion, creativity and culture. Along the way, he has become as recognised for his fearless personality, humour and honesty as for the music itself.</p>
+            <p class="speaker-bio">A DJ, author and outspoken cultural voice, Fat Tony&rsquo;s extraordinary personal journey is also one of reinvention, resilience and authenticity, proof that staying relevant is not about following culture, but continuing to live, challenge and contribute to it.</p>
+          </div>
+        </article>
+
+        <article class="speaker">
+          <figure class="speaker-photo">
+            <img src="assets/speaker-aysegul-yurekli-sengor.jpg" width="852" height="1200" loading="lazy"
+                 alt="Ay&#351;eg&uuml;l Y&uuml;rekli &#350;eng&ouml;r, founder of MARKA, photographed in black and white.">
+          </figure>
+          <div class="speaker-profile">
+            <h2 class="speaker-name">Ayşegül Yürekli Şengör</h2>
+            <p class="label speaker-role">Founder of MARKA &middot; Co-Founder &amp; President, STEPEVI</p>
+            <p class="speaker-bio">Ayşegül Yürekli Şengör is an entrepreneur whose work spans business, design and culture.</p>
+            <p class="speaker-bio">She founded MARKA in Istanbul in 2000, creating a platform that brings together voices from business, design, fashion, art and culture around ideas and conversations that cross disciplines. After more than two decades in Istanbul, MARKA London marks the platform&rsquo;s first international edition.</p>
+            <p class="speaker-bio">As Co-Founder and President of STEPEVI, together with her husband and business partner, Cem Şengör, she has led the evolution of a family heritage in rug-making into an international luxury design brand, connecting contemporary Turkish craftsmanship with a global design community.</p>
+            <p class="speaker-bio">Across both MARKA and STEPEVI, her work is shaped by a consistent interest in bringing different worlds together, challenging established patterns and creating new possibilities through ideas, design and collaboration.</p>
+          </div>
+        </article>
+
+      </div>
 
     </div>
   </section>
