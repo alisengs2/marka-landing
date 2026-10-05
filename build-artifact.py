@@ -14,7 +14,7 @@ import re
 root = pathlib.Path(__file__).parent
 PAGES = {"index.html": "artifact.html", "about.html": "about.html",
          "venue.html": "venue.html", "speakers.html": "speakers.html",
-         "stepevi.html": "stepevi.html"}
+         "stepevi.html": "stepevi.html", "event-day.html": "event-day.html"}
 
 # Published artifact URL for each source page; blank until the page has a URL.
 ARTIFACT_URLS = {
@@ -23,6 +23,7 @@ ARTIFACT_URLS = {
     "venue.html": "",
     "speakers.html": "",
     "stepevi.html": "",
+    "event-day.html": "",
 }
 
 shared_css = (root / "styles.css").read_text(encoding="utf-8")

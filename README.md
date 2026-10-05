@@ -15,10 +15,12 @@ No build step, no dependencies — plain HTML, one stylesheet, and images.
 | `stepevi.html` | MARKA x STEPEVI |
 | `speakers.html` | Speakers |
 | `venue.html` | The Venue |
+| `event-day.html` | Event Day (full programme timeline) |
 
 The home page runs: hero banner, a sticky ticker that pins below the header on
-scroll, a four-box programme grid, the Event Day schedule, How to Attend, Journal,
-and the footer. The four inner pages share one layout — title, banner figure, body
+scroll, a four-box programme grid, the Day at a Glance timeline, How to Attend,
+Journal, and the footer. The Event Day page repeats that timeline under the
+conference masthead. The other inner pages share one layout — title, banner figure, body
 copy — and link from both the programme boxes and the footer.
 
 ## Running it
